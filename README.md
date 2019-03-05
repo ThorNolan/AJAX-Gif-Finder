@@ -1,6 +1,6 @@
 AJAX-Gif-Finder
 =======================================
-A simple site I made that populates the page with relevant gifs based on keyword searches.   
+A simple site I made that populates the page with relevant gifs based on keyword searches from user input.   
 ![demo image](link here)
 
 ## Technologies Used
@@ -14,7 +14,7 @@ A simple site I made that populates the page with relevant gifs based on keyword
 
 ## How to Use the Site
 
-1. In the empty search bar, type in a keyword relating to whichever type of gif you're trying to see!
+1. In the empty search bar, type in a keyword relating to whichever type of gif you're trying to see! This will then appear as a button that can be clicked to generate 10 more relevant gifs.
    
 2. The page will filter out certain results based on rating, and then populate the page with gifs based on your search.
    
