@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 //===================GLOBALS========================
 
 // Initial array to populate the first buttons that appear on the top of the page when it loads
@@ -28,6 +28,9 @@ function createButton() {
 
 // Function to display the gifs and their relevant information in the gifDisplay area
 function gifDisplay() {
+
+  // clear out my gif display area so new gifs can be placed there  
+  $("#gifDisplay").empty();  
   
   var topic = $(this).attr("data-name");
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic +"&api_key=GJ27HgHFEf0rGR4aQesqgJU7fSvuiESl&limit=10"
@@ -49,7 +52,7 @@ function gifDisplay() {
         var gifRating = gifObject[i].rating;
         var gifRatingDisplay = $("<p>").text("Rating: " + gifRating);
 
-        var gifURL = gifObject[i].images.url;
+        var gifURL = gifObject[i].images.fixed_height.url;
         var image = $("<img>");
             image.attr("src", gifURL);
 
@@ -70,15 +73,17 @@ function gifDisplay() {
 $("#addGif").on("click", function(event) {
   event.preventDefault();
 
-  var topic = $("#gifKeyword").val().trim();
+    var topic = $("#gifKeyword").val().trim();
     
-    topics.push(topic);
+        topics.push(topic);
 
-  createButton();
+    createButton();
 });
 
 // on click listener for my dynamically generated buttons with the class .gifBtn
-$(document).on("click", ".gifBtn", gifDisplay);
+$(document).on("click", ".gifBtn", gifDisplay); 
 
 // call my create button function
 createButton();
+
+});
