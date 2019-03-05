@@ -38,30 +38,31 @@ function gifDisplay() {
     method: "GET"
   }).then(function(response) {
     
-    var gifDiv = $("<div class='gif'>");
-
+    // var to store my data from the 
+    var gifObject = response.data;
     console.log(response);
-    // Storing the rating data
-    var rated = response.rating;
 
-    // displays the rating of the gif
-    var gifRating = $("<p>").text("Rating: " + rated);
-    $("#gifDisplay").empty();
+    for (var i = 0; i < gifObject.length; i++) {
+        var gifDiv = $("<div class='gif'>");
 
-    gifDiv.append(gifRating);
+        // displays the rating of the gif
+        var gifRating = gifObject[i].rating;
+        var gifRatingDisplay = $("<p>").text("Rating: " + gifRating);
 
-    var gifURL = response.url;
-    var image = $("<img>").attr("src=", gifURL);
+        var gifURL = gifObject[i].images.url;
+        var image = $("<img>");
+            image.attr("src", gifURL);
 
-    // Appending the image
-    gifDiv.append(image);
+        // Appending the image and rating
+        gifDiv.append(image);
+        gifDiv.append(gifRatingDisplay);
 
-    $("#gifDisplay").empty();
-    $("#gifDisplay").append(gifDiv);
+
+        $("#gifDisplay").append(gifDiv);
+    }
+
   });
-
-}
-
+}  
 
 //=============ON CLICK AND CALLING MY FUNCTIONS===========
 
@@ -79,7 +80,5 @@ $("#addGif").on("click", function(event) {
 // on click listener for my dynamically generated buttons with the class .gifBtn
 $(document).on("click", ".gifBtn", gifDisplay);
 
-// call my create button 
+// call my create button function
 createButton();
-
-// on click listener clicks on the gifs to pause/play them 
