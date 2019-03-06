@@ -18,7 +18,7 @@ $(document).ready(function() {
     for (var i = 0; i < topics.length; i++) {
         
       var newButton = $("<button>");
-      newButton.addClass("gifBtn");
+      newButton.addClass("gifBtn btn-dark");
       newButton.attr("data-name", topics[i]);
       newButton.text(topics[i]);
 

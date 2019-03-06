@@ -1,3 +1,12 @@
 * {
     box-sizing: border-box;
 }
+
+/* font-family: 'Economica', sans-serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Faster One', cursive; */
+
+body {
+    background: rgba(0,0,0,0.85);
+    font-family: 'Economica', sans-serif;
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- google fonts -->
-
+    <link href="https://fonts.googleapis.com/css?family=Economica|Faster+One|Julius+Sans+One" rel="stylesheet">
     <!-- favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="../AJAX-Gif-Finder/assets/images/favicon.ico" type="image/x-icon">
     <!-- animate css and bootstrap cdn's -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -20,20 +20,20 @@
 
 <body>
 
-    <div class="container">
+    <div class="container fluid">
             
-        <form id="gifForm">
-            <label for="gifKeyword">New GIF</label>
+        <form id="gifForm" class="form-control-lg">
+            <label for="gifKeyword">New Theme:</label>
 
-            <input type="text" id="gifKeyword">
+            <input type="text" id="gifKeyword" required />
 
             <br>
             
-            <input id="addGif" type="submit" value="Add a GIF">
+            <input id="addGif" class="btn-lg btn-dark" type="submit" value="Add Theme">
         </form>
                
         <!-- new buttons go here -->
-        <div class="container flex mx-auto" id="buttonsArea">
+        <div class="container fluid mx-auto" id="buttonsArea">
 
             <div class="mx-auto" id="buttonsDisplay"></div>
 
