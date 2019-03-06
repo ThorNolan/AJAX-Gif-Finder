@@ -1,15 +1,15 @@
 $(document).ready(function() {
 //===================GLOBALS========================
 
-// Initial array to populate the first buttons that appear on the top of the page when it loads
-var topics = ["trees", "wind", "mountains", "flowers", "ocean"];
+  // Initial array to populate the first buttons that appear on the top of the page when it loads
+  var topics = ["trees", "wind", "mountains", "flowers", "ocean"];
 
 
 
 //==================FUNCTIONS========================
 
-// Function for creating buttons based on my topics array, which will be dynamically updated when a user inputs a new topic in the search form
-function createButton() {
+  // Function for creating buttons based on my topics array, which will be dynamically updated when a user inputs a new topic in the search form
+  function createButton() {
 
     // prevents repeat buttons
     $("#buttonsDisplay").empty();
@@ -24,66 +24,89 @@ function createButton() {
 
       $("#buttonsDisplay").append(newButton);
     }
-}
+  }
 
-// Function to display the gifs and their relevant information in the gifDisplay area
-function gifDisplay() {
+  // Function to display the gifs and their relevant information in the gifDisplay area
+  function gifDisplay() {
 
-  // clear out my gif display area so new gifs can be placed there  
-  $("#gifDisplay").empty();  
+    // clear out my gif display area so new gifs can be placed there  
+    $("#gifDisplay").empty();  
   
-  var topic = $(this).attr("data-name");
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic +"&api_key=GJ27HgHFEf0rGR4aQesqgJU7fSvuiESl&limit=10"
+    var topic = $(this).attr("data-name");
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic +"&api_key=GJ27HgHFEf0rGR4aQesqgJU7fSvuiESl&limit=10"
 
-  // ajax call based on the topic for the button that was clicked
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
+    // ajax call based on the topic for the button that was clicked
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
     
-    // var to store my data from the 
-    var gifObject = response.data;
-    console.log(response);
+      // var to store my data from the 
+      var gifObject = response.data;
+      console.log(response);
 
-    for (var i = 0; i < gifObject.length; i++) {
-        var gifDiv = $("<div class='gif'>");
+      for (var i = 0; i < gifObject.length; i++) {
+          var gifDiv = $("<div>");
 
-        // displays the rating of the gif
-        var gifRating = gifObject[i].rating;
-        var gifRatingDisplay = $("<p>").text("Rating: " + gifRating);
+          // displays the rating of the gif
+          var gifRating = gifObject[i].rating;
+          var gifRatingDisplay = $("<p>").text("Rating: " + gifRating);
 
-        var gifURL = gifObject[i].images.fixed_height.url;
-        var image = $("<img>");
-            image.attr("src", gifURL);
+          var stillURL = gifObject[i].images.original_still.url;
+          var animatedURL = gifObject[i].images.original.url;
 
-        // Appending the image and rating
-        gifDiv.append(image);
-        gifDiv.append(gifRatingDisplay);
+          var image = $("<img class='gif'>");
+            
+            // give my images an original data-state of still for my on-click pause/play feature
+            image.attr("src", stillURL);
+            image.attr("data-state", "still");
+
+            image.attr("data-still", stillURL);
+        	image.attr("data-animate", animatedURL);
+
+          // Appending the image and rating
+          gifDiv.append(image);
+          gifDiv.append(gifRatingDisplay);
 
 
-        $("#gifDisplay").append(gifDiv);
-    }
+          $("#gifDisplay").append(gifDiv);
+      }
+    });
+  }  
 
-  });
-}  
+  // Function for pausing/playing gifs by changing their data-state to "still" or "animate" which changes their URL
+  function pauseAndPlay () {
+      var state = $(this).attr("data-state");
+
+      if (state === "still") {
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+  }
 
 //=============ON CLICK AND CALLING MY FUNCTIONS===========
 
-// on click listener for my "add gif" button
-$("#addGif").on("click", function(event) {
-  event.preventDefault();
+  // On-click listener for my "add gif" button
+  $("#addGif").on("click", function(event) {
+    event.preventDefault();
 
-    var topic = $("#gifKeyword").val().trim();
+      var topic = $("#gifKeyword").val().trim();
     
-        topics.push(topic);
+          topics.push(topic);
 
-    createButton();
-});
+      createButton();
+  });
 
-// on click listener for my dynamically generated buttons with the class .gifBtn
-$(document).on("click", ".gifBtn", gifDisplay); 
+  // On-click listener for my dynamically generated buttons with the class .gifBtn
+  $(document).on("click", ".gifBtn", gifDisplay); 
 
-// call my create button function
-createButton();
+  // Call my create button function at the beginning to populate my first buttons
+  createButton();
+
+  // On-click listener for the gifs to pause/play them 
+  $(document).on("click", ".gif", pauseAndPlay);
 
 });
