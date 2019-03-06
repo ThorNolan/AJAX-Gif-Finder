@@ -2,7 +2,7 @@ $(document).ready(function() {
 //===================GLOBALS========================
 
   // Initial array to populate the first buttons that appear on the top of the page when it loads
-  var topics = ["trees", "wind", "mountains", "flowers", "ocean"];
+  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "ocean", "cyberspace","planet", "solar", "lunar", "black hole", "cosmos", "universe"];
 
 
 
@@ -28,9 +28,6 @@ $(document).ready(function() {
 
   // Function to display the gifs and their relevant information in the gifDisplay area
   function gifDisplay() {
-
-    // clear out my gif display area so new gifs can be placed there  
-    $("#gifDisplay").empty();  
   
     var topic = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic +"&api_key=GJ27HgHFEf0rGR4aQesqgJU7fSvuiESl&limit=10"
@@ -40,6 +37,9 @@ $(document).ready(function() {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
+
+      // clear out my gif display area so new gifs can be placed there  
+      $("#gifDisplay").empty();  
     
       // var to store my data from the 
       var gifObject = response.data;
@@ -94,8 +94,12 @@ $(document).ready(function() {
     event.preventDefault();
 
       var topic = $("#gifKeyword").val().trim();
-    
-          topics.push(topic);
+
+        // stops form from submitting if the input is empty
+        if (topic.length == 0)
+            return;
+
+        topics.push(topic);
 
       createButton();
   });

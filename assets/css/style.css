@@ -2,11 +2,14 @@
     box-sizing: border-box;
 }
 
-/* font-family: 'Economica', sans-serif;
+/* Google fonts:
+font-family: 'Economica', sans-serif;
 font-family: 'Julius Sans One', sans-serif;
-font-family: 'Faster One', cursive; */
+*/
 
 body {
+    /* background-image: url(../images/stars-tall-dark.jpg); */
+    /* background-size: cover; */
     background: rgba(0,0,0,0.85);
-    font-family: 'Economica', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
 }

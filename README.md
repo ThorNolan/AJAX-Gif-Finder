@@ -20,7 +20,8 @@ A simple site I made that populates the page with relevant gifs based on keyword
    
 3. Click on a gif to "play" it, and click again to pause it. You also have the option of downloading the gif if you want.
 
- + favicon comes from: <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+ + Favicon, astronaut, and spacesuit glove icons: <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+   
   
 [Click here to play!](deployed link here "deployed game")
 )
