@@ -3,13 +3,84 @@
 }
 
 /* Google fonts:
-font-family: 'Economica', sans-serif;
-font-family: 'Julius Sans One', sans-serif;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-family: 'Comfortaa', cursive;
 */
 
 body {
     /* background-image: url(../images/stars-tall-dark.jpg); */
     /* background-size: cover; */
-    background: rgba(0,0,0,0.85);
-    font-family: 'Julius Sans One', sans-serif;
+    background: black;
+    font-family: 'Comfortaa', cursive;
+    color: white;
 }
+
+nav {
+    background-image: url(../images/stardust-background.png);
+}
+
+#astronaut {
+    width: 35px;
+    height: auto;
+}
+
+#choiceArea {
+    margin-left: 2%;
+    width: 130px;
+    height: auto;
+    margin-top: 6%;
+}
+
+#gifArea {
+    float: right;
+}
+
+button {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 10%;
+    color: white;
+    border-color: black;
+}
+
+/* Shutter Out Vertical button effect */
+.hvr-shutter-out-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: black;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-out-vertical:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00F0FF;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active {
+    color: white;
+  }
+  .hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }

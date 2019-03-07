@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Economica|Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|ZCOOL+QingKe+HuangYou" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcut icon" href="../AJAX-Gif-Finder/assets/images/favicon.ico" type="image/x-icon">
     <!-- animate css and bootstrap cdn's -->
@@ -15,40 +15,38 @@
     <!-- my stylesheet -->
     <link rel="stylesheet" href="assets\css\style.css">
 
-    <title>GIF Space</title>
+    <title>GIF Me Some Space</title>
 </head>
 
 <body>
 
-    <div class="container fluid">
+    <!-- new buttons go here -->
+    <nav class="navbar fixed-top">
 
-        <p>Don't want to look at GIF's about space? Fine. Add any extra themes below...</p>
+        <div class="mx-auto" id="buttonsDisplay"></div>
+
+    </nav> 
+
+    <div class="wrapper" id="choiceArea">
+
+        <p id="header"><img src="assets/images/astronaut-falling.png" alt="Astronaut falling" id="astronaut">Tired of space GIFs? Add themes below...</p>
             
         <form id="gifForm" class="form-control-lg">
             <label for="gifKeyword">New Theme:</label>
 
             <input type="text" id="gifKeyword" required />
 
-            <br>
-            
             <input id="addGif" class="btn-lg btn-dark" type="submit" value="Add Theme">
-        </form>
-               
-        <!-- new buttons go here -->
-        <div class="container fluid mx-auto" id="buttonsArea">
-
-            <div class="mx-auto" id="buttonsDisplay"></div>
-
-        </div>    
-            
-        <!-- this area is for displaying gifs after my call has been made -->
-        <div class="container flex mx-auto" id="gifArea">
-
-            <div id="gifDisplay"></div>
-
-        </div>        
+        </form>       
                   
     </div>
+
+    <!-- this area is for displaying gifs after my call has been made -->
+    <div class="container flex mx-auto" id="gifArea">
+
+        <div id="gifDisplay"></div>
+
+    </div>    
     
     <img id=powered-by src="assets/images/PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif"></img>
 
