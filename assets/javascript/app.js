@@ -2,7 +2,7 @@ $(document).ready(function() {
 //===================GLOBALS========================
 
   // Initial array to populate the first buttons that appear on the top of the page when it loads
-  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "constellation", "deep space","planet", "solar", "lunar", "black hole", "cosmos", "universe", "comet", "exoplanet", "event horizon", "milky way"];
+  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "deep space","planet", "solar", "lunar", "black hole", "cosmos", "universe", "comet", "wormhole", "event horizon", "milky way"];
 
 
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
   // On-click listener for my "add gif" button
   $("#addGif").on("click", function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
       var topic = $("#gifKeyword").val().trim();
 
@@ -100,6 +100,11 @@ $(document).ready(function() {
             return;
 
         topics.push(topic);
+
+        // clears out the input form
+        var form = document.getElementById("gifForm");
+        form.reset();
+
 
       createButton();
   });

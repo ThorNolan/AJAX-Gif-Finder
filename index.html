@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|ZCOOL+QingKe+HuangYou" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcut icon" href="../AJAX-Gif-Finder/assets/images/favicon.ico" type="image/x-icon">
-    <!-- animate css and bootstrap cdn's -->
+    <!-- Bootstrap cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
     <!-- my stylesheet -->
     <link rel="stylesheet" href="assets\css\style.css">
 
@@ -27,11 +27,11 @@
 
     </nav> 
 
-    <div class="wrapper" id="choiceArea">
+    <div class="wrapper mx-auto" id="choiceArea">
 
         <div class="sidebar">
         
-          <p id="header"><img src="assets/images/astronaut-falling.png" alt="Astronaut falling" id="astronaut">Want to see something different? Add themes below and a new button will appear...</p>
+          <p id="header"><img src="assets/images/astronaut-falling.png" alt="Astronaut falling" id="astronaut">Looking for something different? Enter a new keyword below and a new button will appear...</p>
             
           <form id="gifForm" class="form-control-lg">
             <label for="gifKeyword">New Theme:</label>
@@ -41,18 +41,18 @@
             <input id="addGif" class="hvr-shutter-out-vertical" type="submit" value="Add Theme">
           </form> 
 
+          <img id="giphy-credit"  src="assets/images/PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif"></img>
+
         </div>
 
     </div>
 
     <!-- this area is for displaying gifs after my call has been made -->
     <div class="d-flex flex-wrap" id="gifArea">
-
-        <div id="gifDisplay" class="mx-auto"></div>
+        
+        <div id="gifDisplay" class="mx-auto">CLICK ANY GIF TO PLAY OR PAUSE</div>
 
     </div>    
-    
-    <img id=powered-by src="assets/images/PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif"></img>
 
 
     <!-- link to the jQuery library and my javascript -->

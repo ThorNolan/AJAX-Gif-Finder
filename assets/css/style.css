@@ -22,6 +22,7 @@ nav {
 #astronaut {
     width: 35px;
     height: auto;
+    padding: 5px;
 }
 
 /* #choiceArea {
@@ -34,9 +35,9 @@ nav {
 .wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 75px;
-    height: 25vh;
-    width: 20%;
+    margin-top: 100px;
+    width: 40%;
+    margin-bottom: 25px;
 }
 
 #gifArea {
@@ -57,6 +58,9 @@ button {
     border-color: #00F0FF;
 }
 
+#giphy-credit {
+    margin-left: 32%;
+}
 
 /* Shutter Out Vertical button effect */
 .hvr-shutter-out-vertical {
