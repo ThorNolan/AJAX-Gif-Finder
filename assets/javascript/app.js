@@ -2,7 +2,7 @@ $(document).ready(function() {
 //===================GLOBALS========================
 
   // Initial array to populate the first buttons that appear on the top of the page when it loads
-  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "ocean", "cyberspace","planet", "solar", "lunar", "black hole", "cosmos", "universe"];
+  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "constellation", "deep space","planet", "solar", "lunar", "black hole", "cosmos", "universe", "comet", "exoplanet", "event horizon", "milky way"];
 
 
 

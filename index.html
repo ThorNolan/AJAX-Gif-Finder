@@ -29,22 +29,26 @@
 
     <div class="wrapper" id="choiceArea">
 
-        <p id="header"><img src="assets/images/astronaut-falling.png" alt="Astronaut falling" id="astronaut">Tired of space GIFs? Add themes below...</p>
+        <div class="sidebar">
+        
+          <p id="header"><img src="assets/images/astronaut-falling.png" alt="Astronaut falling" id="astronaut">Want to see something different? Add themes below and a new button will appear...</p>
             
-        <form id="gifForm" class="form-control-lg">
+          <form id="gifForm" class="form-control-lg">
             <label for="gifKeyword">New Theme:</label>
 
             <input type="text" id="gifKeyword" required />
 
-            <input id="addGif" class="btn-lg btn-dark" type="submit" value="Add Theme">
-        </form>       
-                  
+            <input id="addGif" class="hvr-shutter-out-vertical" type="submit" value="Add Theme">
+          </form> 
+
+        </div>
+
     </div>
 
     <!-- this area is for displaying gifs after my call has been made -->
-    <div class="container flex mx-auto" id="gifArea">
+    <div class="d-flex flex-wrap" id="gifArea">
 
-        <div id="gifDisplay"></div>
+        <div id="gifDisplay" class="mx-auto"></div>
 
     </div>    
     

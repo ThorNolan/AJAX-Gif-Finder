@@ -10,7 +10,7 @@ A simple site I made that populates the page with relevant gifs based on keyword
   
 + Based on keyword searches from user input, I make AJAX calls to the GIPHY API to generate relevant gifs.
   
-+ Build using the Bootstrap CDN for general page layout and added responsiveness, as well as the animate.css CDN for a few css animations.
++ Build using the Bootstrap CDN for general page layout and added responsiveness, as well as the animate.css CDN for a few css animations. The hover effect for buttons came from Hover.css.
 
 ## How to Use the Site
 
