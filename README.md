@@ -1,6 +1,6 @@
 GIF Me Some Space
 =======================================
-A simple site I made that populates the page with relevant gifs based on keyword searches from user input and button presses. The theme is space, so the first buttons will be space themed, but users are free to add any additional themes they would like using the form on the page. 
+A simple site I made that populates the page with relevant gifs based on keyword searches from user input and button presses. The theme is space, so the first buttons that appear on the navbar are all space themed, but users are free to add any additional themes they would like using the form on the page. 
    
 ![demo image](assets/images/giphy-demo-image.PNG)
 
@@ -11,7 +11,9 @@ A simple site I made that populates the page with relevant gifs based on keyword
   
 + Based on keyword searches from user input, I make AJAX calls to the GIPHY API to generate relevant gifs.
   
-+ Build using the Bootstrap CDN for general page layout and added responsiveness, the hover effect for buttons came from Hover.css, though I costumized it to better match my theme.
++ Built using the Bootstrap CDN for general page layout and added responsiveness.
+  
++  The hover effect for buttons came from Hover.css (http://ianlunn.github.io/Hover/), though I customized it to better match my theme.
 
 ## How to Use the Site
 
@@ -21,7 +23,7 @@ A simple site I made that populates the page with relevant gifs based on keyword
    
 3. Click on a gif to "play" it, and click again to pause it. You also have the option of downloading the gif if you want.
 
- + Favicon, astronaut, and spacesuit glove icons: <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+ + Favicon, astronaut, and spacesuit glove icons source: <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
    
   
 [Click here to try it out!](https://thornolan.github.io/AJAX-Gif-Finder/ "deployed game")

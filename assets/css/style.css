@@ -104,3 +104,21 @@ button {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
+
+/* media queries for responsive layout */
+
+@media only screen and (max-width:768px) {
+    #choiceArea {
+        margin-top: 125px;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    #choiceArea {
+        margin-top: 265px;
+    }
+
+    .sidebar {
+        margin-left: -45%;
+    }
+}
