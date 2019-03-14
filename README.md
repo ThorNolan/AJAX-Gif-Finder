@@ -5,7 +5,7 @@ A simple site I made that populates the page with relevant gifs based on keyword
 ![demo image](assets/images/giphy-demo-image.PNG)
 
 ## Technologies Used
-+ Page elements and styling were done with HTML and CSS, and the game logic with Javascript. 
++ Page elements and styling were done with HTML5 and CSS3, and the game logic with Javascript. 
   
 + I used the jQuery library to dynamically update elements on my page and generate buttons based on user input. 
   
@@ -13,7 +13,7 @@ A simple site I made that populates the page with relevant gifs based on keyword
   
 + Built using the Bootstrap CDN for general page layout and added responsiveness.
   
-+  The hover effect for buttons came from Hover.css (http://ianlunn.github.io/Hover/), though I customized it to better match my theme.
++  The hover effect for buttons came from Hover.css (http://ianlunn.github.io/Hover/), though I customized it in my own css to better match my theme.
 
 ## How to Use the Site
 
@@ -22,6 +22,8 @@ A simple site I made that populates the page with relevant gifs based on keyword
 2. The page will be populated with static gifs based on your search.
    
 3. Click on a gif to "play" it, and click again to pause it. You also have the option of downloading the gif if you want.
+   
+4. If you're looking at this site on mobile, it's touch friendly! Touch a gif to play it.
 
  + Favicon, astronaut, and spacesuit glove icons source: <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
    

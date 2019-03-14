@@ -116,6 +116,6 @@ $(document).ready(function() {
   createButton();
 
   // On-click listener for the gifs to pause/play them 
-  $(document).on("click", ".gif", pauseAndPlay);
+  $(document).on("click touchstart", ".gif", pauseAndPlay);
 
 });
