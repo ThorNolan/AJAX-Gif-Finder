@@ -2,18 +2,18 @@ GIF Me Some Space
 =======================================
 A simple site I made that populates the page with relevant gifs based on keyword searches from user input and button presses. The theme is space, so the first buttons that appear on the navbar are all space themed, but users are free to add any additional themes they would like using the form on the page. 
    
-![demo image](assets/images/giphy-demo-image.PNG)
+![demo image](assets/images/gif-me-some-space-demo.gif "Demo GIF")
 
 ## Technologies Used
-+ Page elements and styling were done with HTML5 and CSS3, and the game logic with Javascript. 
++ Page elements and styling were done with **HTML5** and **CSS3**, and the game logic with **JavaScript**. 
   
-+ I used the jQuery library to dynamically update elements on my page and generate buttons based on user input. 
++ I used the **jQuery** library to dynamically update elements on my page and generate buttons based on user input. 
   
-+ Based on keyword searches from user input, I make AJAX calls to the GIPHY API to generate relevant gifs.
++ Based on keyword searches from user input, I make **Ajax** calls to the **GIPHY API** to generate relevant gifs.
   
-+ Built using the Bootstrap CDN for general page layout and added responsiveness.
++ Built using the **Bootstrap CDN** for general page layout and added responsiveness.
   
-+  The hover effect for buttons came from Hover.css (http://ianlunn.github.io/Hover/), though I customized it in my own css to better match my theme.
++  The hover effect for buttons came from **Hover.css** (http://ianlunn.github.io/Hover/), though I customized it in my own css to better match my theme.
 
 ## How to Use the Site
 
@@ -29,3 +29,7 @@ A simple site I made that populates the page with relevant gifs based on keyword
    
   
 [Click here to try it out!](https://thornolan.github.io/AJAX-Gif-Finder/ "deployed game")
+
+## Author 
+
+Thor Nolan

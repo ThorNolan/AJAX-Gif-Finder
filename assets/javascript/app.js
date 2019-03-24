@@ -2,8 +2,7 @@ $(document).ready(function() {
 //===================GLOBALS========================
 
   // Initial array to populate the first buttons that appear on the top of the page when it loads
-  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "deep space","planet", "solar", "lunar", "black hole", "cosmos", "universe", "comet", "wormhole", "event horizon", "milky way"];
-
+  var topics = ["space", "stars", "sun", "supernova", "nebula", "galaxy", "earth", "deep space","planet", "solar", "lunar", "cosmos", "universe", "comet", "wormhole", "event horizon", "milky way"];
 
 
 //==================FUNCTIONS========================
@@ -43,26 +42,28 @@ $(document).ready(function() {
     
       // var to store my data from the 
       var gifObject = response.data;
-      console.log(response);
+      //console.log(response);
 
       for (var i = 0; i < gifObject.length; i++) {
           var gifDiv = $("<div>");
+              gifDiv.addClass("justify-content-center");
 
           // displays the rating of the gif
           var gifRating = gifObject[i].rating;
           var gifRatingDisplay = $("<p>").text("Rating: " + gifRating);
+              gifRatingDisplay.addClass("mx-auto text-center")
 
           var stillURL = gifObject[i].images.original_still.url;
           var animatedURL = gifObject[i].images.original.url;
 
-          var image = $("<img class='gif'>");
+          var image = $("<img class='gif rounded mx-auto d-block responsive-img'>");
             
             // give my images an original data-state of still for my on-click pause/play feature
             image.attr("src", stillURL);
             image.attr("data-state", "still");
 
             image.attr("data-still", stillURL);
-        	image.attr("data-animate", animatedURL);
+        	  image.attr("data-animate", animatedURL);
 
           // Appending the image and rating
           gifDiv.append(image);
@@ -115,7 +116,7 @@ $(document).ready(function() {
   // Call my create button function at the beginning to populate my first buttons
   createButton();
 
-  // On-click listener for the gifs to pause/play them 
+  // On-click listener for the gifs to pause/play them, with touchstart for better touch functionality on a phone 
   $(document).on("click touchstart", ".gif", pauseAndPlay);
 
 });
